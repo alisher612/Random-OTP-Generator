@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #091540, #1b76f2);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: #121421;
+  width: min(36em, 90%);
+  padding: 3em 2em;
+  border-radius: 1em;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+h1 {
+  color: #00e5ff;
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  color: #a0aec0;
+  font-size: 1.1rem;
+  margin-bottom: 1.5em;
+  font-weight: 400;
+}
+
+.description {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-bottom: 2em;
+}
+
+button {
+  background-color: #00e5ff;
+  color: #121421;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  padding: 0.9em 2em;
+  border-radius: 0.4em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 229, 255, 0.3);
+}
+
+button:hover {
+  background-color: #00c2dd;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 229, 255, 0.5);
+}
+
+#otpDisplay {
+  margin-top: 2em;
+  font-size: 2rem;
+  color: #00e5ff;
+  background-color: #1e1f2a;
+  padding: 1em 0;
+  border-radius: 0.5em;
+  letter-spacing: 0.5em;
+  animation: fadeIn 0.5s ease-in-out;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+/* Apply when OTP is visible */
+#otpDisplay.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Optional fade-in keyframe */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
